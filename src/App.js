@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+      purchasable: true,
+      purchasing: true
+  };
+
+  showCancel = () => {
+    this.setState({purchasing: false});
+  };
+
+  showClose = () => {
+    this.setState({purchasable: false});
+  };
+
+  showContinue = () => {
+    alert('You are continue!');
+  };
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+      const buttons = [
+          {type: 'danger', label: "Don't click me!", clicked: this.buttonClicked},
+          {type: 'success', label: "Click me!", clicked: this.buttonClicked}
+      ];
+  };
 }
 
 export default App;
