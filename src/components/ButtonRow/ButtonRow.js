@@ -9,4 +9,4 @@ function ButtonRow(props) {
 }
 
 
-export default ButtonRow
+export default ButtonRow;
