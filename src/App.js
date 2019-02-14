@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+// import Bac
 
 class App extends Component {
 
@@ -22,8 +23,8 @@ class App extends Component {
 
   render() {
       const buttons = [
-          {type: 'danger', label: "Don't click me!", clicked: this.buttonClicked},
-          {type: 'success', label: "Click me!", clicked: this.buttonClicked}
+          {type: 'danger', label: "Open!", clicked: this.buttonClicked},
+          {type: 'success', label: "Close!", clicked: this.buttonClicked}
       ];
   };
 }
